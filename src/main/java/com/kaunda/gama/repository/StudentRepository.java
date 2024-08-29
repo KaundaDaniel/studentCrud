@@ -1,0 +1,13 @@
+package com.kaunda.gama.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.kaunda.gama.model.Student;
+
+public interface StudentRepository extends JpaRepository<Student, Long> {
+
+    Optional<Student> findByEmail(String email);
+
+}
